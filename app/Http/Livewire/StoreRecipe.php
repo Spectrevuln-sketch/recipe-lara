@@ -46,7 +46,7 @@ class StoreRecipe extends Component
         $this->validate();
         $this->form['user_id'] = Auth::user()->id;
         $this->form['picture'] = $this->picture->getClientOriginalName();
-        $this->picture->storeAs($this->form['user_id'].'-'.$this->form['title'], $this->form['picture']);
+        $this->picture->storeAs($this->form['user_id'] . '-' . $this->form['title'], $this->form['picture']);
         Recipe::create($this->form);
         session()->flash('message', 'Recipe successfully posted.');
         return redirect('/my-recipe');

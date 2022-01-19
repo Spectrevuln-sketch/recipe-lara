@@ -8,6 +8,9 @@ use Livewire\Component;
 
 class MyRecipe extends Component
 {
+
+
+
     public function render()
     {
         $user_id = Auth::user()->id;
